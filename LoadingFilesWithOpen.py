@@ -28,3 +28,6 @@ for line in data3:
 print("El dataset tiene %d filas y %d columnas"%(counter, n_cols))
 
 ##print(mainDiccionario)
+
+df = pd.DataFrame(mainDiccionario)
+print(df.head)
