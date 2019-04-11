@@ -1,1 +1,1 @@
-print('data6: ', data6)
+print('a: ', a)
