@@ -15,6 +15,26 @@ data = pd.read_csv(fullPath, sep=",")
 ##Filtrar por condicion
 #Usuarios con Total Mins > 500
 data2 = data[data["Day Mins"] >300]
-print('data: ', data2["Day Mins"])
+# print('data: ', data2["Day Mins"])
+# print(len(data2))
+ 
+#Estados de NY
+data3 = data[data["State"] == "NY"]
+# print('data3: ', data3)
 
-# print(data.columns.values.tolist())
+#Dos condiciones
+#AND &
+data4 = data[(data["Day Mins"]>300) & (data["State"]=="NY")]
+# print('data4: ', data4)
+# print(data4.shape)
+
+#OR |
+data5 = data[(data["Day Mins"]>300) | (data["State"] == "NY")]
+# print(data5, len(data5))
+
+#Comparando columnas
+data6 = data[(data["Day Calls"] > data["Night Calls"])]
+print('data6: ', data6[["Day Calls", "Night Calls"]])
+
+
+
