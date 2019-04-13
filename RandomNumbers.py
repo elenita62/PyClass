@@ -52,4 +52,10 @@ columnList = datos.columns.values.tolist()
 #Elijo una columna al azar de una lista
 for x in range(5):
     randomColumn = np.random.choice(columnList)
-    print('randomColumn: ', randomColumn)
+    # print('randomColumn: ', randomColumn)
+
+#Con una semilla de partida
+np.random.seed(2018)
+#Generamos 5 numeros aleatorios
+for i in range(5):
+    print(np.random.random())
